@@ -22,5 +22,5 @@ async function inserto(client,newdoc){{
     }
 }
 
-data = {name: "Vraj Patel", age: 20, city: "New York"};
+data = {name: "Patel Vraj Chetankumar", age: 21, city: "california"};
 inserto(client,data);

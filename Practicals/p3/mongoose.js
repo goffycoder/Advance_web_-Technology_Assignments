@@ -26,42 +26,37 @@ const krischema = new mongoose.Schema({
 
 const obj = mongoose.model('kri', krischema);
 
-const newobj = new obj({
-    name: 'Vraj Patel',
-    email: 'vraj.pce21@sot.pdpu.ac.in',
-    age: 20
-})
+// Define an array containing the documents to insert
+// const newUsers = [
+//     { name: 'Harsh', email: 'h@gmail.com', age: 20 },
+//     { name: 'Tanish', email: 'Tan@gmail.com', age: 21 }
+// ];
 
-// newobj.save()
-//   .then(kri => console.log('User created:', kri))
-//   .catch(err => console.error(err));
-
-
-// FIND 
-
-// obj.find({})
-//     .then((doc) => {
-//         console.log(doc);
+// // Insert many documents into the database
+// obj.insertMany(newUsers)
+//     .then((docs) => {
+//         console.log('Documents inserted:', docs);
 //     })
 //     .catch((err) => {
-//         console.log(err);
-//     });
-
-//query with condition to find with name 
-
-// obj.find({name: 'Vraj Patel'})
-//     .then((doc) => {
-//         console.log(doc);
-//     })
-//     .catch((err) => {
-//         console.log(err);
+//         console.error('Error inserting documents:', err);
 //     });
 
 
-// update
+// Find one document by name
+// obj.findOne({ name: 'Vraj Patel' })
+//     .then((doc) => {
+//         if (doc) {
+//             console.log('Document found:', doc);
+//         } else {
+//             console.log('No document found with the given name.');
+//         }
+//     })
+//     .catch((err) => {
+//         console.error('Error finding document:', err);
+//     });
 
 // UPDATE ONE
-// obj.updateOne({name:"Harsh Shah"},{$set:{name: "Harsh"}})
+// obj.updateOne({name:"Vraj Patel"},{$set:{name: "Vraj Chetankumar Patel"}})
 //   .then((docs)=>{
 //     if(docs) {
 //        console.log(docs);
@@ -71,7 +66,6 @@ const newobj = new obj({
 //  }).catch((err)=>{
 //     console.log(err);
 // })
-
 
 // UPDATE MANY
 // obj.updateMany({age: 20},{$set:{ age: 21}})
@@ -85,6 +79,8 @@ const newobj = new obj({
 //     console.log(err);
 // })
 
+//deleteone
+
 // obj.deleteOne({name: "Harsh"})
 // .then((docs)=>{
 //     if(docs) {
@@ -95,23 +91,6 @@ const newobj = new obj({
 //  }).catch((err)=>{
 //     console.log(err);
 // })
-
-
-// INSERt MANY
-// const Newuser = new obj({name: 'Harsh',
-// email: 'h@gmail.com',
-// age: 20});
-// const Newuser1 = new obj({name: 'Tanish',
-// email: 'Tan@gmail.com',
-// age: 21});
-
-// // it srore directly to collection
-// obj.collection.insertMany([Newuser,Newuser1])
-//   .then((data)=>{
-//   console.log (data);
-//   }).catch((err)=>{
-//     console.log(err);}
-//     );
 
 // DELETE MANY
 obj.deleteMany({name: "Tanish"})
