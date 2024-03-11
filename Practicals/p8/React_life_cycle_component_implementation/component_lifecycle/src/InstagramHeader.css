@@ -1,0 +1,32 @@
+.instagram-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px 20px;
+  }
+  
+  .instagram-logo {
+    font-family: 'Billabong', cursive; /* Instagram's logo font, or similar */
+    font-size: 25px;
+    color: #262626;
+  }
+  
+  .search-input {
+    border: 1px solid #dbdbdb;
+    padding: 3px 10px;
+    border-radius: 3px;
+    outline: none;
+  }
+  
+  /* Adjust and add styles for navigation links and icons */
+  .instagram-nav a {
+    text-decoration: none;
+    color: #262626;
+    margin: 0 10px;
+    font-size: 14px;
+  }
+  
+  /* Further styling can be added for hover effects, active states, etc. */
+  

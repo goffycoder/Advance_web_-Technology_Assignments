@@ -1,14 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Bpp from './cpp';
+import Insta from './App';
+import InstagramHeader from './instagram_header'
 
-import App from './App';
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-
+ReactDOM.render(<Insta />, document.getElementById('root'));
