@@ -1,0 +1,50 @@
+python3 -m venv myworld
+source myworld/bin/activate
+python -m pip install Django
+django-admin --version
+django-admin startproject my_tennis_club 
+python3 manage.py runserver { ater cd to folder}
+
+
+in venv install [brew install postgresql]
+then brew services start postgresql
+createdb my_tennis_club_db
+pip install psycopg2
+
+then change the database in settings.py to => DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'my_tennis_club_db',
+        'USER': 'your_postgres_username',
+        'PASSWORD': 'your_postgres_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
+then create new django applicaiton => python manage.py startapp club
+
+Add the app to INSTALLED_APPS: In your settings.py file, add your new application to the INSTALLED_APPS list:
+INSTALLED_APPS = [
+    ...
+    'club',
+]
+
+
+define model.py in club folder
+
+then create the migrations for them 
+migrations are the djangos ways of propogagting changes made to your model {ading a field , deleting model etc}
+
+migration command => python manage.py makemigraitons
+
+this will generate the migraiton file in directory of app 
+then apply migration to database with following command 
+
+python manage.py migrate
+
+
+//https://www.youtube.com/watch?v=UmljXZIypDc
+ //need to create applicaiton {2 to 3 page} in django and connect to it database {postgresql}
+ // dont have postgresql on my system {macos m1 pro}
+ // 

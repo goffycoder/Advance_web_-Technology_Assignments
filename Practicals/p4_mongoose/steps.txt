@@ -1,0 +1,17 @@
+Objective: Building models with Mongoose
+Experiment 4: Create a database schema and model using mongoose and perform MongoDB queries for operations such as insert, update, and delete while also establishing a connection to the MongoDB database.
+Hint: Ensure that your MongoDB server is running and accessible at localhost:27017 or replace it with the appropriate connection string if it's hosted elsewhere.
+Note: Please include snapshots of all commands, terminal sessions, localhost outputs, and Mongo compass output in your documentation with all necessary steps
+
+
+intialized directory
+npm init -y
+npm install mongoose
+create file with name index.js {defined schema and model}
+run the file using node index.js
+mongosh
+use LibrarySystemModelMongoose
+db.books.find() --> to see inserted data
+
+
+
