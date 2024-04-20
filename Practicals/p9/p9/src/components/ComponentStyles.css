@@ -1,0 +1,76 @@
+/* src/ComponentStyles.css */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px; /* Control max width of the container */
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.hook-example {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 30%; /* Adjust this value to control the size and spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hook-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* or use 'flex-start' to align them to the left */
+  align-items: flex-start;
+  gap: 20px; /* This adds some space between the cards */
+}
+.hook-example h3 {
+  flex-basis: calc(33.333% - 20px); /* Subtract the gap from the flex-basis to fit three in a row */
+  max-width: calc(33.333% - 20px); /* Again, account for the gap */
+  box-sizing: border-box;
+  color: #007bff;
+  margin-bottom: 15px; /* Adds spacing between title and content */
+}
+
+.hook-example p, .hook-example button {
+  margin-bottom: 10px;
+}
+
+.hook-example button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hook-example button:hover {
+  background-color: #218838;
+}
+
+.uncontrolled-reviews-display {
+  width: 100%;
+  background-color: #f8f9fa;
+  border-top: 3px solid #dee2e6;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Media query for smaller screens to stack the cards */
+@media (max-width: 768px) {
+  .hook-example {
+    flex-basis: 100%; /* Full width on small screens */
+    max-width: 100%;
+  }
+}
